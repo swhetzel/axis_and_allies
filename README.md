@@ -1,5 +1,5 @@
 # axis_and_allies
-Repository for simulations and other tools that I've created to help better understand the expected outcomes of certain decisions and actions in the Axis and Allies game series. 
+Repository for tools that I've created to help understand the expected outcomes of player actions in the Axis and Allies game series.
 
 ## 1. `battle_of_the_bulge`
 Modules pertaining to the [Axis and Allies: Battle of the Bulge](https://boardgamegeek.com/boardgame/22457/axis-allies-battle-bulge) board game. Functionality runs through two main objects contained in separate modules. Main object is an attack simulator (`BoBAttackSimulator`) that calculates the probability of all possible outcomes given a single attack scenario (one hexagon attacking another). This object is leveraged by a helper object (`BoBAttackHelper`) to explore the outcomes of hypothetical scenarios and simulate through multiple attacks on a single defending hexagon. 
