@@ -130,8 +130,8 @@ class BoBAttackSimulator:
         total evacuation following the attack, and the expected amount of
         defending power destroyed by the attack.
         """
-        print("EVACUATION PROBABILITY:", round(self.prob_evacuate, 3))
-        print("EXPECTED POWER DESTROYED:", round(self.exp_power_destroyed, 3))
+        print("EVACUATION PROBABILITY:   ", round(self.prob_evacuate, 3))
+        print("EXPECTED POWER DESTROYED: ", round(self.exp_power_destroyed, 3))
 
     def _verify_attributes(self):
         """

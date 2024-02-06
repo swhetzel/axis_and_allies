@@ -8,7 +8,7 @@ import pandas as pd
 import seaborn as sns
 from matplotlib import pyplot as plt
 import os
-from bob_attack_simulator import BoBAttackSimulator
+from battle_of_the_bulge.bob_attack_simulator import BoBAttackSimulator
 
 class BoBAttackHelper:
     """
@@ -184,12 +184,15 @@ class BoBAttackHelper:
                 ])
             fig.savefig(save_path)
 
-    def simulate_multi_attack(self, attack_powers):
+    def simulate_multi_attack(self, attack_powers, verbose=False):
         """
         Iteratively simulates all possible outcomes that could occur given the
         x attacks specified by the `attack_powers` list. Calculates the total
         probability of hex evacuation given the attack and saves it in the
         `multi_attack_prob_evac` attribute.
+
+        WARNING: This process can take a few minutes as the object fully
+        explores the every possible attack outcome.
 
         Parameters
         ----------
@@ -252,6 +255,12 @@ class BoBAttackHelper:
                 ]).reset_index(drop=True)
 
         self.multi_attack_prob_evac = evac_df.outcome_pred.sum()
+
+        if verbose:
+            print(
+                "PROBABILITY OF EVAC FOR MULTI ATTACK:",
+                round(self.multi_attack_prob_evac, 3)
+                )
 
 
 
