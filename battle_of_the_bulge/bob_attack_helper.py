@@ -192,7 +192,7 @@ class BoBAttackHelper:
         `multi_attack_prob_evac` attribute.
 
         WARNING: This process can take a few minutes as the object fully
-        explores the every possible attack outcome.
+        explores every possible attack outcome.
 
         Parameters
         ----------
